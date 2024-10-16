@@ -1,0 +1,77 @@
+Certainly! Let’s break down the provided BMI calculator code step by step and explain its functionality in English.
+
+▎Code Explanation
+
+1. Input for Weight and Height:
+      a = float(input("weight"))
+   b = float(input("height"))
+   
+
+   • The program first prompts the user to input their weight (in kilograms) and height (in meters). These inputs are converted to floating-point numbers and stored in variables a and b.
+
+2. Calculating BMI:
+      c = (b * b)
+   d = (a / c)
+   
+
+   • The variable c calculates the square of the height (b * b).
+
+   • The variable d calculates the BMI using the formula:
+
+BMI = weight / heigh²}
+
+
+• The result is stored in the variable d.
+
+3. Printing the BMI Value:
+      print(d)
+   
+
+   • This line prints the calculated BMI value.
+
+4. BMI Classification:
+      if(d <= 0.001850): print("Under Weight")
+   if (0.00185 < d < 0.00249): print("Normal")
+   if (0.00249 < d < 0.00299): print("Over Weight")
+   if (0.00299 < d < 0.00349): print("Obese")
+   if (0.00185 < d < 0.00249): print("Extremely Obese")
+   
+
+   • The code then checks the value of d against various thresholds to classify the individual's weight status:
+
+     • If d is less than or equal to 0.001850, it prints "Under Weight".
+
+     • If d is between 0.00185 and 0.00249, it prints "Normal".
+
+     • If d is between 0.00249 and 0.00299, it prints "Over Weight".
+
+     • If d is between 0.00299 and 0.00349, it prints "Obese".
+
+     • There is an incorrect condition for "Extremely Obese" that overlaps with the "Normal" category.
+
+▎Issues in the Code
+
+1. Incorrect Thresholds: The BMI values are being compared to very small numbers (like 0.001850). This is not correct as BMI should be calculated based on standard units (e.g., kg/m²). Typically, BMI values range from around 10 to 50 for adults.
+
+  
+2. Overlapping Conditions: The condition for "Extremely Obese" overlaps with "Normal", which will never allow it to be reached.
+
+▎Correcting the Code
+
+To fix these issues, you should use proper BMI thresholds based on kg/m². Here’s a revised version of the classification:
+
+if d < 18.5:
+    print("Under Weight")
+elif 18.5 <= d < 24.9:
+    print("Normal")
+elif 25 <= d < 29.9:
+    print("Over Weight")
+elif 30 <= d < 39.9:
+    print("Obese")
+else:
+    print("Extremely Obese")
+
+
+▎Conclusion
+
+This explanation clarifies how the provided BMI calculator works, highlights its flaws, and offers a corrected approach to classify BMI accurately based on standard thresholds.
