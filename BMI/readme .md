@@ -51,4 +51,4 @@ BMI = weight / heigh²}
 
 ▎Conclusion
 
-This explanation clarifies how the provided BMI calculator works, highlights its flaws, and offers a corrected approach to classify BMI accurately based on standard thresholds.
+This explanation clarifies how the provided BMI calculator works,
